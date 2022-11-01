@@ -1,7 +1,5 @@
 codeunit 80140 "String Utils FLX"
 {
-    Access = Internal;
-
     procedure ReduceSpaces(InputString: Text) OutputString: Text
     // after https://andreilungu.com/remove-extra-spaces-from-string/
     var

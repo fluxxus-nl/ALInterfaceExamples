@@ -4,18 +4,11 @@ codeunit 89100 "Names Mock FLX" implements "INameFormat FLX"
 
     internal procedure FormattedName(Person: Record "Person FLX"): Text
     var
+        StringUtils: Codeunit "String Utils FLX";
         NewFormattedName: Text;
     begin
-        case true of
-            (Person."First Name" = '') and (Person."Second Name(s)" = ''):
-                exit('');
-            Person."First Name" = '':
-                NewFormattedName := Person."Second Name(s)";
-            Person."Second Name(s)" = '':
-                NewFormattedName := Person."First Name";
-            else
-                NewFormattedName := Person."First Name" + ' ' + Person."Second Name(s)";
-        end;
+        NewFormattedName := Person."First Name" + ' ' + Person."Second Name(s)";
+        NewFormattedName := StringUtils.ReduceSpaces(NewFormattedName);
         exit(Reverse(NewFormattedName))
     end;
 
@@ -23,16 +16,15 @@ codeunit 89100 "Names Mock FLX" implements "INameFormat FLX"
     var
         NewString: Text[200];
         tempChar: Char;
-        halfLength, i, N : Integer;
+        halfLength, i, n : Integer;
     begin
-        N := StrLen(String);
-        // halfLength := N / 2;
-        halfLength := N DIV 2;
+        n := StrLen(String);
+        halfLength := n DIV 2;
         NewString := String;
         for i := 1 to halfLength do begin
             tempChar := NewString[i];
-            NewString[i] := NewString[N + 1 - i];
-            NewString[N + 1 - i] := tempChar;
+            NewString[i] := NewString[n + 1 - i];
+            NewString[n + 1 - i] := tempChar;
         end;
         exit(NewString);
     end;
