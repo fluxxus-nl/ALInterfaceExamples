@@ -37,10 +37,12 @@ table 80100 "Person FLX"
 
     procedure GetFormattedName(): Text
     var
-        StringUtils: Codeunit "String Utils FLX";
+        NameMgt: Codeunit "Format Name Mgt FLX";
+        NameFormatHandler: Interface "INameFormat FLX";
         FullName: Text;
     begin
-        FullName := "First Name" + ' ' + "Last Name";
-        exit(StringUtils.ReduceSpaces(FullName));
+        NameMgt.GetNameFormatHandler(NameFormatHandler);
+        FullName := NameFormatHandler.FormattedName(Rec);
+        exit(FullName);
     end;
 }
