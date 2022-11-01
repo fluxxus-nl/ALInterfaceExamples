@@ -22,8 +22,10 @@ codeunit 80100 "Install Persons FLX"
             Person."First Name" := FirstName;
             Person."Second Name(s)" := SecondNames;
             Person."Last Name" := LastName;
-            Person."Name Format" := NameFormat;
             Person.Insert();
+        end else begin
+            Person."Name Format" := NameFormat;
+            Person.Modify();
         end;
     end;
 }
