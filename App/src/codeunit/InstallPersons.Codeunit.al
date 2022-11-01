@@ -9,11 +9,11 @@ codeunit 80100 "Install Persons FLX"
 
     local procedure SetupPersons()
     begin
-        CreatePerson('Luc', 'Roger Dionysius Maria', 'van Vugt');
-        CreatePerson('Thijs', 'Carlos Beator Maria', 'van Vugt');
+        CreatePerson('Luc', 'Roger Dionysius Maria', 'van Vugt', "Name Format FLX"::"First Name");
+        CreatePerson('Thijs', 'Carlos Beator Maria', 'van Vugt', "Name Format FLX"::"Full Name");
     end;
 
-    local procedure CreatePerson(FirstName: Text; SecondNames: Text; LastName: Text)
+    local procedure CreatePerson(FirstName: Text; SecondNames: Text; LastName: Text; NameFormat: Enum "Name Format FLX")
     var
         Person: Record "Person FLX";
     begin
@@ -23,6 +23,9 @@ codeunit 80100 "Install Persons FLX"
             Person."Second Name(s)" := SecondNames;
             Person."Last Name" := LastName;
             Person.Insert();
+        end else begin
+            Person."Name Format" := NameFormat;
+            Person.Modify();
         end;
     end;
 }

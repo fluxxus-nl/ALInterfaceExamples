@@ -25,6 +25,11 @@ table 80100 "Person FLX"
             Caption = 'Last Name';
             DataClassification = ToBeClassified;
         }
+        field(5; "Name Format"; Enum "Name Format FLX")
+        {
+            Caption = 'Name Format';
+            DataClassification = ToBeClassified;
+        }
     }
 
     keys
@@ -37,12 +42,9 @@ table 80100 "Person FLX"
 
     procedure GetFormattedName(): Text
     var
-        NameMgt: Codeunit "Format Name Mgt FLX";
         NameFormatHandler: Interface "INameFormat FLX";
-        FullName: Text;
     begin
-        NameMgt.GetNameFormatHandler(NameFormatHandler);
-        FullName := NameFormatHandler.FormattedName(Rec);
-        exit(FullName);
+        NameFormatHandler := "Name Format";
+        exit(NameFormatHandler.FormattedName(Rec));
     end;
 }
