@@ -20,7 +20,12 @@ table 80100 "Person FLX"
             Caption = 'Second Name(s)';
             DataClassification = ToBeClassified;
         }
-        field(4; "Name Format"; Enum "Name Format FLX")
+        field(4; "Last Name"; Text[100])
+        {
+            Caption = 'Last Name';
+            DataClassification = ToBeClassified;
+        }
+        field(5; "Name Format"; Enum "Name Format FLX")
         {
             Caption = 'Name Format';
             DataClassification = ToBeClassified;

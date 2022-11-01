@@ -22,6 +22,11 @@ page 80100 "PersonsFLX"
                     ApplicationArea = All;
                     ToolTip = 'Specifies the second name(s) of the person.';
                 }
+                field("Last Name"; Rec."Last Name")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies the last name of the person.';
+                }
                 field("Name Format"; Rec."Name Format")
                 {
                     ApplicationArea = All;

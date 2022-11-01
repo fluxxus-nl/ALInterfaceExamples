@@ -1,4 +1,5 @@
 enum 80104 "Name Format FLX" implements "INameFormat FLX"
+// , "INameFormat 2 FLX"
 {
     Caption = 'Name Format';
     Extensible = true;
@@ -9,14 +10,14 @@ enum 80104 "Name Format FLX" implements "INameFormat FLX"
         Caption = 'First Name';
         Implementation = "INameFormat FLX" = "First Name FLX";
     }
-    value(1; "Second Name(s)")
+    value(1; "Full Name")
     {
-        Caption = 'Second Name(s)';
-        Implementation = "INameFormat FLX" = "Second Names FLX";
+        Caption = 'Full Name';
+        Implementation = "INameFormat FLX" = "Full Name FLX";
     }
-    value(2; "All Names")
+    value(2; "Passport Name")
     {
-        Caption = 'All Names';
-        Implementation = "INameFormat FLX" = "All Names FLX";
+        Caption = 'Passport Name';
+        Implementation = "INameFormat FLX" = "Passport Name FLX";
     }
 }
