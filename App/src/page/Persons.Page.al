@@ -27,16 +27,6 @@ page 80100 "PersonsFLX"
                     ApplicationArea = All;
                     ToolTip = 'Specifies the last name of the person.';
                 }
-                field("Name Format"; Rec."Name Format")
-                {
-                    ApplicationArea = All;
-                    ToolTip = 'Specifies the value of the name format.';
-
-                    trigger OnValidate()
-                    begin
-                        CurrPage.Update();
-                    end;
-                }
                 field("Formatted Name"; Rec.GetFormattedName())
                 {
                     ApplicationArea = All;
