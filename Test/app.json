@@ -1,0 +1,57 @@
+{
+  "id": "cfaf896f-3142-477d-870a-01b75f6a71a6",
+  "name": "TestInterfaceInjection",
+  "publisher": "fluxxus.nl",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "./assets/logo.png",
+  "screenshots": [],
+  "dependencies": [
+    {
+      "id": "e7320ebb-08b3-4406-b1ec-b4927d3e280b",
+      "publisher": "Microsoft",
+      "version": "20.0.0.0",
+      "name": "Any"
+    },
+    {
+      "id": "dd0be2ea-f733-4d65-bb34-a28f4624fb14",
+      "publisher": "Microsoft",
+      "version": "20.0.0.0",
+      "name": "Library Assert"
+    },
+    {
+      "id": "5d86850b-0d76-4eca-bd7b-951ad998e997",
+      "publisher": "Microsoft",
+      "version": "20.0.0.0",
+      "name": "Tests-TestLibraries"
+    },
+    {
+      "id": "b82d8a76-627c-412c-a899-78f69ac27d00",
+      "name": "InterfaceInjection",
+      "publisher": "fluxxus.nl",
+      "version": "1.0.0.0"
+    }
+  ],
+  "platform": "1.0.0.0",
+  "application": "20.0.0.0",
+  "idRanges": [
+    {
+      "from": 89100,
+      "to": 89149
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "9.0",
+  "features": [
+    "NoImplicitWith"
+  ]
+}
