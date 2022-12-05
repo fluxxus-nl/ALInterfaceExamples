@@ -1,0 +1,70 @@
+{
+  "id": "81b90441-3f72-434f-b96c-18b946e85873",
+  "name": "Test VAT VIES Interface Example",
+  "publisher": "fluxxus.nl",
+  "brief": "Test app to VAT VIES interface example",
+  "description": "Test app to VAT VIES interface example to illustrate interface-based injection",
+  "version": "1.0.0.0",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [
+    {
+      "id": "0540c3dc-8554-44a8-9c6e-f5205a664a7c",
+      "name": "VAT VIES Interface Example",
+      "publisher": "fluxxus.nl",
+      "version": "1.0.0.0"
+    },
+    {
+      "id": "e7320ebb-08b3-4406-b1ec-b4927d3e280b",
+      "publisher": "Microsoft",
+      "version": "21.0.0.0",
+      "name": "Any"
+    },
+    {
+      "id": "dd0be2ea-f733-4d65-bb34-a28f4624fb14",
+      "publisher": "Microsoft",
+      "version": "21.0.0.0",
+      "name": "Library Assert"
+    },
+    {
+      "id": "5095f467-0a01-4b99-99d1-9ff1237d286f",
+      "publisher": "Microsoft",
+      "version": "21.0.0.0",
+      "name": "Library Variable Storage"
+    },
+    {
+      "id": "5d86850b-0d76-4eca-bd7b-951ad998e997",
+      "publisher": "Microsoft",
+      "version": "21.0.0.0",
+      "name": "Tests-TestLibraries"
+    },
+    {
+      "id":  "23de40a6-dfe8-4f80-80db-d70f83ce8caf",
+      "name":  "Test Runner",
+      "publisher":  "Microsoft",
+      "version":  "21.0.0.0"
+    }
+  ],
+  "screenshots": [],
+  "platform": "21.0.0.0",
+  "application": "1.0.0.0",
+  "idRanges": [
+    {
+      "from": 89700,
+      "to": 89799
+    }
+  ],
+  "target": "OnPrem",
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "10.0",
+  "features": [
+    "NoImplicitWith"
+  ]
+}

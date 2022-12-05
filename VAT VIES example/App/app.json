@@ -1,0 +1,33 @@
+{
+  "id": "0540c3dc-8554-44a8-9c6e-f5205a664a7c",
+  "name": "VAT VIES Interface Example",
+  "publisher": "fluxxus.nl",
+  "brief": "Using VAT VIES interface example",
+  "description": "Using VAT VIES interface example to illustrate interface-based injection",
+  "version": "1.0.0.0",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [ ],
+  "screenshots": [],
+  "platform": "21.0.0.0",
+  "application": "1.0.0.0",
+  "idRanges": [
+    {
+      "from": 58700,
+      "to": 58799
+    }
+  ],
+  "target": "OnPrem",
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "10.0",
+  "features": [
+    "NoImplicitWith"
+  ]
+}
